@@ -1,13 +1,15 @@
 package com.tanxiaoluo.androidbaselibrary;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.tanxiaoluo.androidbaselibrary.base.ToolBarActivity;
+import com.tanxiaoluo.core.annotation.LayoutId;
+
+@LayoutId(R.layout.activity_main)
+public class MainActivity extends ToolBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
     }
 }

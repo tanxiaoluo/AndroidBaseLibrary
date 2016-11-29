@@ -50,7 +50,7 @@ public class MyApp extends BaseApplication {
         registerActivityLifecycleCallbacks(mActivityLifecycle);
 
 
-        if (!isMainProcess()) {
+        if (!shouldInit()) {
             Timber.d("this is no Main Process !");
             return;
         }
@@ -71,7 +71,7 @@ public class MyApp extends BaseApplication {
      *
      * @return boolean
      */
-    protected boolean isMainProcess() {
+    protected boolean shouldInit() {
         ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
         List<ActivityManager.RunningAppProcessInfo> processInfos = manager.getRunningAppProcesses();
         String mainProcessName = getPackageName();

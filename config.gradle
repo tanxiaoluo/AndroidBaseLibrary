@@ -1,17 +1,43 @@
 ext {
     android = [
-        compileSdkVersion: 24,
-        buildToolsVersion: "24.0.3",
-        applicationId: "com.tanxiaoluo.androidbaselibrary",
-        minSdkVersion: 15,
-        targetSdkVersion: 22,
-        versionCode: 1,
-        versionName: "1.0"
+            compileSdkVersion: 24,
+            buildToolsVersion: "24.0.3",
+            applicationId    : "com.tanxiaoluo.androidbaselibrary",
+            minSdkVersion    : 15,
+            targetSdkVersion : 22,
+            versionCode      : 1,
+            versionName      : "1.0"
     ]
 
     dependencies = [
-        appcompatV7: 'com.android.support:appcompat-v7:24.2.1',
-        design: 'com.android.support:design:24.2.1',
-        recyclerview: 'com.android.support:recyclerview-v7:24.2.1'
+            // test
+            espressoCore         : 'com.android.support.test.espresso:espresso-core:2.2.2',
+            junit                : 'junit:junit:4.12',
+
+            appcompatV7          : 'com.android.support:appcompat-v7:24.2.1',
+            design               : 'com.android.support:design:24.2.1',
+            recyclerview         : 'com.android.support:recyclerview-v7:24.2.1',
+
+            // sugar
+            sugar                : 'com.github.satyan:sugar:1.5',
+            // net
+            okhttp3              : 'com.squareup.okhttp3:okhttp:3.4.2',
+            loggingInterceptor   : 'com.squareup.okhttp3:logging-interceptor:3.4.2',
+            retrofit             : 'com.squareup.retrofit2:retrofit:2.1.0',
+            retrofitAdapterRxjava: 'com.squareup.retrofit2:adapter-rxjava:2.1.0',
+            retrofitConverterGson: 'com.squareup.retrofit2:converter-gson:2.1.0',
+            // 网络调试
+            stetho               : 'com.facebook.stetho:stetho:1.4.1',
+            stethoOkhttp3        : 'com.facebook.stetho:stetho-okhttp3:1.4.1',
+            // rx
+            rxAndroid            : 'io.reactivex:rxandroid:1.2.1',
+            // butterknife
+            butterknife          : 'com.jakewharton:butterknife:8.2.1',
+            butterknifeCompiler  : 'com.jakewharton:butterknife-compiler:8.2.1',
+            // other
+            glide                : 'com.github.bumptech.glide:glide:3.7.0',
+            springview           : 'com.liaoinstan.springview:library:1.2.6',
+            flexibledivider      : 'com.yqritc:recyclerview-flexibledivider:1.2.9',
+            timber               : 'com.jakewharton.timber:timber:4.1.2'
     ]
 }

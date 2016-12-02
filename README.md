@@ -1,7 +1,7 @@
 # AndroidBaseLibrary
 
 ## 目的
-  将一些APP内常用的功能和基础类抽成一个个lib，方便使用的时候直接集成进入工程。
+  将一些APP内常用的功能和基础类抽成一个个lib，使用的时候直接集成进入工程。
 
 ## 项目结构
 
@@ -28,11 +28,11 @@
 - [com.github.satyan:sugar:1.5](http://satyan.github.io/sugar/)
 
 #### Net
-- [com.squareup.okhttp3:okhttp:3.4.2'](http://square.github.io/okhttp/)
-- com.squareup.okhttp3:logging-interceptor:3.4.2'
-- [com.squareup.retrofit2:retrofit:2.1.0'](https://square.github.io/retrofit/)
-- com.squareup.retrofit2:adapter-rxjava:2.1.0'
-- com.squareup.retrofit2:converter-gson:2.1.0'
+- [com.squareup.okhttp3:okhttp:3.4.2](http://square.github.io/okhttp/)
+- com.squareup.okhttp3:logging-interceptor:3.4.2
+- [com.squareup.retrofit2:retrofit:2.1.0](https://square.github.io/retrofit/)
+- com.squareup.retrofit2:adapter-rxjava:2.1.0
+- com.squareup.retrofit2:converter-gson:2.1.0
 
 #### Net debug
 - [com.facebook.stetho:stetho:1.4.1](http://facebook.github.io/stetho/)

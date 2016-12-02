@@ -30,22 +30,6 @@ public class MyApp extends BaseApplication {
 
         mApp = this;
 
-        if (BuildConfig.DEBUG) {
-            StrictMode.setThreadPolicy(
-                    new StrictMode.ThreadPolicy.Builder()
-                            .detectAll()
-                            .penaltyDropBox()
-                            .penaltyLog()
-                            .build());
-            StrictMode.setVmPolicy(
-                    new StrictMode.VmPolicy.Builder()
-                            .detectAll()
-                            .penaltyDropBox()
-                            .penaltyLog()
-                            .build());
-            Stetho.initializeWithDefaults(this);
-        }
-
         mActivityLifecycle = new ActivityLifecycle();
         registerActivityLifecycleCallbacks(mActivityLifecycle);
 
@@ -63,25 +47,5 @@ public class MyApp extends BaseApplication {
     public void onTerminate() {
         super.onTerminate();
         unregisterActivityLifecycleCallbacks(mActivityLifecycle);
-    }
-
-
-    /**
-     * 判断主进程, 用于避免一些重复进程的注册, 比如推送
-     *
-     * @return boolean
-     */
-    protected boolean shouldInit() {
-        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-        List<ActivityManager.RunningAppProcessInfo> processInfos = manager.getRunningAppProcesses();
-        String mainProcessName = getPackageName();
-        int myPid = Process.myPid();
-        for (ActivityManager.RunningAppProcessInfo info : processInfos) {
-            Timber.i("processinfo pid = %s, processName = %s", info.pid, info.processName);
-            if (info.pid == myPid && mainProcessName.equals(info.processName)) {
-                return true;
-            }
-        }
-        return false;
     }
 }
